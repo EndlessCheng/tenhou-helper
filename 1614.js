@@ -7338,12 +7338,14 @@
                     console.log("ws:onerror", a)
                 },
                 open: function() {
+                    console.log("ws:open", JSON.stringify(a))
                     this.send(JSON.stringify(a))
                 },
                 message: function(a) {
                     try {
                         var b = JSON.parse(a.data)
                     } catch (p) {}
+                    console.log("ws:message", b)
                     2 == I.a && yb.rb(u.tw, b);
                     xb.lb(b);
                     1 == I.a && "D" == b.tag || Y.pa(b)
